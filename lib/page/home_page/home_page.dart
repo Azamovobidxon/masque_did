@@ -29,21 +29,25 @@ class _HomePageState extends State<HomePage> {
         future: mainController.getPrayDate(),
         builder: (context,snapshot){
           if (snapshot.connectionState == ConnectionState.done) {
-            return Column(
+            return ListView(
               children: [
-                 CustomAppBar(
-                   cityName: mainController.namozModelDushanba?.region ?? "",
-                 ),
-                const KabaPicTure(),
-                const SizedBox(height: 20,),
-                Monday(
-                  namozModelDushanba: mainController.namozModelDushanba,
-                  namozModelSeshanba: mainController.namozModelSeshanba,
-                  namozModelChorshanba: mainController.namozModelChorshanba,
-                  namozModelPayshanba: mainController.namozModelPayshanba,
-                  namozModelJuma: mainController.namozModelJusm,
-                  namozModelShanba: mainController.namozModelShanba,
-                  namozModelYakshanba: mainController.namozModelYaxshanba,
+                Column(
+                  children: [
+                     CustomAppBar(
+                       cityName: mainController.namozModelDushanba?.region ?? "",
+                     ),
+                     KabaPicTure(),
+                     SizedBox(height: 20,),
+                    Monday(
+                      namozModelDushanba: mainController.namozModelDushanba,
+                      namozModelSeshanba: mainController.namozModelSeshanba,
+                      namozModelChorshanba: mainController.namozModelChorshanba,
+                      namozModelPayshanba: mainController.namozModelPayshanba,
+                      namozModelJuma: mainController.namozModelJusm,
+                      namozModelShanba: mainController.namozModelShanba,
+                      namozModelYakshanba: mainController.namozModelYaxshanba,
+                    ),
+                  ],
                 ),
               ],
             );
