@@ -8,7 +8,7 @@ class CustomAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding:  EdgeInsets.only(left: 22.0,right: 20.0,top: 20),
+      padding: const EdgeInsets.only(left: 22.0,right: 20.0,top: 20),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -18,7 +18,7 @@ class CustomAppBar extends StatelessWidget {
           ),
           IconButton(
             onPressed: () {},
-            icon:  Icon(
+            icon: const  Icon(
               CupertinoIcons.search,
               size: 20,
               color: Colors.black,

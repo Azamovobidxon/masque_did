@@ -36,8 +36,8 @@ class _HomePageState extends State<HomePage> {
                      CustomAppBar(
                        cityName: mainController.namozModelDushanba?.region ?? "",
                      ),
-                     KabaPicTure(),
-                     SizedBox(height: 20,),
+                   const  KabaPicTure(),
+                   const SizedBox(height: 20,),
                     Monday(
                       namozModelDushanba: mainController.namozModelDushanba,
                       namozModelSeshanba: mainController.namozModelSeshanba,
